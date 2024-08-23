@@ -178,7 +178,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-  const response = await axios.get('http://localhost:3000/api/users');
+  const response = await axios.get('http://35.91.187.47/api/users');
   return {
     props: {
       data: response.data,
