@@ -177,11 +177,11 @@ export default function Home({data}) {
   );
 }
 
-export async function getStaticProps() {
-  const response = await axios.get('http://35.91.187.47/api/users');
+export async function getServerSideProps(context) {
+    const response = await axios.get('http://35.91.187.47/api/users');
   return {
     props: {
       data: response.data,
     },
   };
-}
+  }
